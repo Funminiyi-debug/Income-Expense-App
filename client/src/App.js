@@ -16,10 +16,8 @@ function App() {
   
   const getTransactions = async (url) => {
    try {
-    const res = await axios.get(url);
-    if (res){
-      console.log(res.data)
-    }
+    const res = await axios.get(url)
+
     setTransactions((transactions) => {
       return [...res.data.data]
     })
@@ -29,14 +27,6 @@ function App() {
    }
   
   }
-
-  // const [total, setTotal] = useState(0.00)
- 
-  
-  // const updateTotal = (amounts) => {
-    
-  //     setTotal(calcTotal)
-  // }
 
   useEffect(() => {
    getTransactions(url)
