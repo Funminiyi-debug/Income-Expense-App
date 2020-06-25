@@ -16,6 +16,10 @@ app.use(cors({origin: true, credentials: true}));;
 app.use(express.json())
 connectDB()
 
+const transactions = require('./routes/transaction');
+
+app.use('/api/v1/transaction', transactions)
+
 if(process.env.NODE_ENV === 'production' ){
     app.use(express.static('client/build'))
 
@@ -26,8 +30,6 @@ if(process.env.NODE_ENV === 'production' ){
 
 const PORT = process.env.PORT || 2200
 
-const transactions = require('./routes/transaction');
 
-app.use('/api/v1/transaction', transactions)
 
 app.listen(PORT, console.log(`Server connected in ${process.env.NODE_ENV} mode running on Port ${PORT}`.cyan.bold))
