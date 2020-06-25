@@ -7,7 +7,7 @@ import Balance from './components/Balance';
 import TransactionHistory from './components/TransactionHistory';
 import axios from 'axios'
 
-const url = 'http://localhost:2000/api/v1/transaction'
+const url = '/api/v1/transaction'
 
 function App() {
   const [transactions, setTransactions ] = useState([])
