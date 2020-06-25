@@ -24,7 +24,7 @@ if(process.env.NODE_ENV === 'production' ){
     })
 }
 
-const PORT = process.env.PORT || 2000
+const PORT = process.env.PORT || 2200
 
 const transactions = require('./routes/transaction');
 
