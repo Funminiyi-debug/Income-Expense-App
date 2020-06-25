@@ -17,6 +17,9 @@ function App() {
   const getTransactions = async (url) => {
    try {
     const res = await axios.get(url);
+    if (res){
+      console.log(res.data.data)
+    }
     setTransactions((transactions) => {
       return [...res.data.data]
     })
