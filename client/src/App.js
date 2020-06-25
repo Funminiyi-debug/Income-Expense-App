@@ -18,7 +18,7 @@ function App() {
    try {
     const res = await axios.get(url);
     if (res){
-      console.log(res.data.data)
+      console.log(res.data)
     }
     setTransactions((transactions) => {
       return [...res.data.data]
